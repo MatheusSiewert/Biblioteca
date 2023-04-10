@@ -1,0 +1,25 @@
+﻿<Window x:Class="Biblioteca.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Biblioteca"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1920" Loaded="Window_Loaded">
+    <Grid>
+        <Button x:Name="BtnLivros" Content="Livros" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="45" Width="302" FontSize="24" FontWeight="Bold" Click="BtnLivros_Click"/>
+        <Button x:Name="BtnUsuarios" Content="Usuários" HorizontalAlignment="Left" Margin="312,10,0,0" VerticalAlignment="Top" Height="45" Width="301" FontSize="24" FontWeight="Bold" Click="BtnUsuarios_Click"/>
+        <DataGrid x:Name="DgLivrosUsuario" AutoGenerateColumns="False" Margin="10,109,10,165" MouseDoubleClick="DgLivrosUsuario_MouseDoubleClick" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" />
+                <DataGridTextColumn Header="Autor" Binding="{Binding Autor}" />
+                <DataGridTextColumn Header="Sinopse" Binding="{Binding Sinopse}" />
+                <DataGridTextColumn Header="Data de lançamento" Binding="{Binding DataLancamento}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="LblSeusLivros" Content="Seus livros:" HorizontalAlignment="Left" Margin="10,55,0,0" VerticalAlignment="Top" Width="780" FontWeight="Bold" Height="49" FontSize="20"/>
+        <Button x:Name="BtnDevolver" Content="Devolver  Livro" HorizontalAlignment="Left" Margin="1584,904,0,0" VerticalAlignment="Top" Height="69" Width="326" FontSize="36" Click="BtnDevolver_Click" IsEnabled="False"/>
+        <Button x:Name="BtnAtualizar" Content="Atualizar" HorizontalAlignment="Left" Margin="1258,904,0,0" VerticalAlignment="Top" Height="69" Width="326" FontSize="36" Click="BtnAtualizar_Click"/>
+    </Grid>
+</Window>

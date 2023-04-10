@@ -1,0 +1,32 @@
+﻿<Window x:Class="Biblioteca.Usuarios"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Biblioteca"
+        mc:Ignorable="d"
+        Title="Usuarios" Height="600" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Label x:Name="LblNome" Content="Nome" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="780" FontWeight="Bold" Height="26" FontSize="8"/>
+        <TextBox x:Name="TxtNome" HorizontalAlignment="Center" Margin="0,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="780" Height="26" FontSize="8"/>
+        <Label x:Name="LblUsuario" Content="Usuario" HorizontalAlignment="Center" Margin="0,67,0,0" VerticalAlignment="Top" Width="780" FontWeight="Bold" Height="26" FontSize="8"/>
+        <TextBox x:Name="TxtUsuario" HorizontalAlignment="Center" Margin="0,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="780" Height="27" FontSize="8"/>
+        <Button x:Name="BtnInserir" Content="Inserir" HorizontalAlignment="Left" Margin="10,292,0,0" VerticalAlignment="Top" Height="30" Width="130" FontSize="8" FontWeight="Bold" Click="BtnInserir_Click"/>
+        <Button x:Name="BtnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="140,292,0,0" VerticalAlignment="Top" Height="30" Width="130" FontSize="8" FontWeight="Bold" Click="BtnExcluir_Click" IsEnabled="False"/>
+        <Button x:Name="BtnLocalizar" Content="Localizar" HorizontalAlignment="Left" Margin="270,292,0,0" VerticalAlignment="Top" Height="30" Width="130" FontSize="8" FontWeight="Bold" Click="BtnLocalizar_Click"/>
+        <Button x:Name="BtnAlterar" Content="Alterar" HorizontalAlignment="Left" Margin="400,292,0,0" VerticalAlignment="Top" Height="30" Width="130" FontSize="8" FontWeight="Bold" Click="BtnAlterar_Click" IsEnabled="False"/>
+        <DataGrid x:Name="DgUsuarios" AutoGenerateColumns="False" Margin="10,327,10,10" Width="NaN" IsReadOnly="True" MouseDoubleClick="DgUsuarios_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="Nome" Binding="{Binding Nome}" />
+                <DataGridTextColumn Header="Usuario" Binding="{Binding Usuario1}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="LblSenha" Content="Senha" HorizontalAlignment="Center" Margin="0,124,0,0" VerticalAlignment="Top" Width="780" FontWeight="Bold" Height="26" FontSize="8"/>
+        <PasswordBox  x:Name="TxtSenha" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" Width="780" Height="27" FontSize="8"/>
+        <Label x:Name="LblConfirmarSenha" Content="Confirmar a senha" HorizontalAlignment="Center" Margin="0,182,0,0" VerticalAlignment="Top" Width="780" FontWeight="Bold" Height="26" FontSize="8"/>
+        <PasswordBox  x:Name="TxtConfirmarSenha" HorizontalAlignment="Center" Margin="0,208,0,0" VerticalAlignment="Top" Width="780" Height="27" FontSize="8"/>
+        <Button x:Name="BtnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="530,292,0,0" VerticalAlignment="Top" Height="30" Width="130" FontSize="8" FontWeight="Bold" Click="BtnSalvar_Click" IsEnabled="False"/>
+        <Button x:Name="BtnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="660,292,0,0" VerticalAlignment="Top" Height="30" Width="130" FontSize="8" FontWeight="Bold" IsEnabled="False" Click="BtnCancelar_Click"/>
+    </Grid>
+</Window>
